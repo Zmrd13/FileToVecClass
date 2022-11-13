@@ -57,8 +57,14 @@ public:
 /**
  * @return  inner vector
  */
-    vector<lli> getVector() {
+      vector<lli> getVector() const {
         return bytes;
+    }
+
+    vector<char> getCharVec() const{
+        std::vector<char> c;
+        for( int i :bytes) c.push_back(i);
+        return c;
     }
 /**
  * write to file as long long int with delimiter ","
